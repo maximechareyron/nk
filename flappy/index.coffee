@@ -21,7 +21,6 @@ deadTubeBottoms = []
 deadInvs = []
 
 bg = null
-# credits = null
 tubes = null
 invs = null
 bird = null
@@ -40,8 +39,11 @@ swooshSnd = null
 
 tubesTimer = null
 
-githubHtml = """<iframe src="http://ghbtns.com/github-btn.html?user=hyspace&repo=flappy&type=watch&count=true&size=large"
-  allowtransparency="true" frameborder="0" scrolling="0" width="150" height="30"></iframe>"""
+character = window.localStorage.getItem("character")
+if character == null
+  window.localStorage.setItem "character", "fab"
+  character = window.localStorage.getItem("character")
+
 
 floor = Math.floor
 
@@ -117,7 +119,7 @@ main = ->
     hiscore = (if hiscore then hiscore else score)
     hiscore = (if score > parseInt(hiscore, 10) then score else hiscore)
     window.localStorage.setItem "hiscore", hiscore
-    gameOverText.setText "GAMEOVER\n\nHIGH SCORE\n\n" + hiscore
+    gameOverText.setText "GAME OVER!\n\nHIGH SCORE\n\n" + hiscore
     gameOverText.renderable = true
 
     # Stop all tubes
@@ -155,27 +157,91 @@ main = ->
     return
 
   preload = ->
-    assets =
-      spritesheet:
-        bird: [
-          "assets/bird.png"
-          36
-          26
-        ]
+  
+    if (character == "fab")
+      assets =
+        spritesheet:
+          bird: [
+            "assets/characters/fab.png"
+            23
+            30
+          ]
+        image:
+          tubeTop: ["assets/tube1.png"]
+          tubeBottom: ["assets/tube2.png"]
+          ground: ["assets/ground.png"]
+          bg: ["assets/bg.png"]
 
-      image:
-        tubeTop: ["assets/tube1.png"]
-        tubeBottom: ["assets/tube2.png"]
-        ground: ["assets/ground.png"]
-        bg: ["assets/bg.png"]
+        audio:
+          flap: ["assets/sfx_wing.mp3"]
+          score: ["assets/sfx_point.mp3"]
+          hurt: ["assets/sfx_hit.mp3"]
+          fall: ["assets/sfx_die.mp3"]
+          swoosh: ["assets/sfx_swooshing.mp3"]
+          
+    else if (character == "th")
+      assets =
+        spritesheet:
+          bird: [
+            "assets/characters/th.png"
+            20
+            30
+          ]
+        image:
+          tubeTop: ["assets/tube1.png"]
+          tubeBottom: ["assets/tube2.png"]
+          ground: ["assets/ground.png"]
+          bg: ["assets/bg.png"]
 
-      audio:
-        flap: ["assets/sfx_wing.mp3"]
-        score: ["assets/sfx_point.mp3"]
-        hurt: ["assets/sfx_hit.mp3"]
-        fall: ["assets/sfx_die.mp3"]
-        swoosh: ["assets/sfx_swooshing.mp3"]
+        audio:
+          flap: ["assets/sfx_wing.mp3"]
+          score: ["assets/sfx_point.mp3"]
+          hurt: ["assets/sfx_hit.mp3"]
+          fall: ["assets/sfx_die.mp3"]
+          swoosh: ["assets/sfx_swooshing.mp3"]
+          
+    else if (character == "meh")
+      assets =
+        spritesheet:
+          bird: [
+            "assets/characters/meh.png"
+            21
+            30
+          ]
+        image:
+          tubeTop: ["assets/tube1.png"]
+          tubeBottom: ["assets/tube2.png"]
+          ground: ["assets/ground.png"]
+          bg: ["assets/bg.png"]
 
+        audio:
+          flap: ["assets/sfx_wing.mp3"]
+          score: ["assets/sfx_point.mp3"]
+          hurt: ["assets/sfx_hit.mp3"]
+          fall: ["assets/sfx_die.mp3"]
+          swoosh: ["assets/sfx_swooshing.mp3"]
+          
+    else
+      assets =
+        spritesheet:
+          bird: [
+            "assets/characters/fhsu.png"
+            24
+            23
+          ]
+        image:
+          tubeTop: ["assets/tube1.png"]
+          tubeBottom: ["assets/tube2.png"]
+          ground: ["assets/ground.png"]
+          bg: ["assets/bg.png"]
+
+        audio:
+          flap: ["assets/sfx_wing.mp3"]
+          score: ["assets/sfx_point.mp3"]
+          hurt: ["assets/sfx_hit.mp3"]
+          fall: ["assets/sfx_die.mp3"]
+          swoosh: ["assets/sfx_swooshing.mp3"]
+          
     Object.keys(assets).forEach (type) ->
       Object.keys(assets[type]).forEach (id) ->
         game.load[type].apply game.load, [id].concat(assets[type][id])
@@ -186,9 +252,7 @@ main = ->
     return
 
   create = ->
-    console.log("%chttps://github.com/hyspace/flappy", "color: black; font-size: x-large");
     ratio = window.innerWidth / window.innerHeight
-    document.querySelector('#github').innerHTML = githubHtml if ratio > 1.15 or ratio < 0.7
     document.querySelector('#loading').style.display = 'none'
 
     # Set world dimensions
@@ -200,17 +264,6 @@ main = ->
 
     # Draw bg
     bg = game.add.tileSprite(0, 0, WIDTH, HEIGHT, 'bg')
-
-    # Credits 'yo
-    # credits = game.add.text(game.world.width / 2, HEIGHT - GROUND_Y + 50, "",
-    #   font: "8px \"Press Start 2P\""
-    #   fill: "#fff"
-    #   stroke: "#430"
-    #   strokeThickness: 4
-    #   align: "center"
-    # )
-    # credits.anchor.x = 0.5
-
 
     # # Add clouds group
     # clouds = game.add.group()
@@ -224,11 +277,7 @@ main = ->
     # Add bird
     bird = game.add.sprite(0, 0, "bird")
     bird.anchor.setTo 0.5, 0.5
-    bird.animations.add "fly", [
-      0
-      1
-      2
-    ], 10, true
+    
     bird.body.collideWorldBounds = true
     bird.body.setPolygon(
       24,1,
@@ -248,7 +297,7 @@ main = ->
     scoreText = game.add.text(game.world.width / 2, game.world.height / 4, "",
       font: "16px \"Press Start 2P\""
       fill: "#fff"
-      stroke: "#430"
+      stroke: "#000"
       strokeThickness: 4
       align: "center"
     )
@@ -258,7 +307,7 @@ main = ->
     instText = game.add.text(game.world.width / 2, game.world.height - game.world.height / 4, "",
       font: "8px \"Press Start 2P\""
       fill: "#fff"
-      stroke: "#430"
+      stroke: "#000"
       strokeThickness: 4
       align: "center"
     )
@@ -268,7 +317,7 @@ main = ->
     gameOverText = game.add.text(game.world.width / 2, game.world.height / 2, "",
       font: "16px \"Press Start 2P\""
       fill: "#fff"
-      stroke: "#430"
+      stroke: "#000"
       strokeThickness: 4
       align: "center"
     )
@@ -293,10 +342,8 @@ main = ->
     gameStarted = false
     gameOver = false
     score = 0
-    # credits.renderable = true
-    # credits.setText "see console log\nfor github url"
-    scoreText.setText "Flappy Bird"
-    instText.setText "TOUCH TO FLAP\nbird WINGS"
+    scoreText.setText "Fabrie Bird\n"
+    instText.setText "MADE IN NUCLEEIRB\nTOUCH TO FLY"
     gameOverText.renderable = false
     bird.body.allowGravity = false
     bird.reset game.world.width * 0.3, game.world.height / 2
@@ -308,7 +355,6 @@ main = ->
 
   start = ->
 
-    # credits.renderable = false
     bird.body.allowGravity = true
     bird.body.gravity.y = GRAVITY
 

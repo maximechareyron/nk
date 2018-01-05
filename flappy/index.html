@@ -1,42 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Fabrie Bird</title>
-  <meta name="viewport" content="width=device-width">
-  <style>
-  body{
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    background: #000;
-  }
-  #screen canvas{
-    margin: 0 auto;
-  }
-  #loading{
-    position: absolute;
-    font-family: "Verdana";
-    width: 100%;
-    text-align: center;
-    color: white;
-    font-size: 24px;
-    top: 50%;
-  }
-  </style>
+      <title>Fabrie Bird</title>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+      <!-- Icons -->
+      <link rel="mask-icon" href="/assets/icon/safari-pinned-tab.svg" color="#5bbad5">
+      <link href='style.css' rel='stylesheet' type='text/css'>      
+      <link href='https://fonts.googleapis.com/css?family=VT323' rel='stylesheet' type='text/css'>
+  	  <meta name="viewport" content="width=device-width">
 </head>
 <body>
 <div id="loading">Chargement...</div>
 <div id="screen"></div>
-<div id="github"></div>
-<script src="index.min.js?v=02131824"></script>
+<div id="about">
+  <div id="character-selection">
+    Perso : 
+	<a class="character" href="javascript:setCharacter('fab');"><img src="assets/characters/fab.png"></a>
+	<a class="character" href="javascript:setCharacter('th');"><img src="assets/characters/th.png"></a>
+	<a class="character" href="javascript:setCharacter('meh');"><img src="assets/characters/meh.png"></a>
+	<a class="character" href="javascript:setCharacter('fhsu');"><img src="assets/characters/fhsu.png"></a>
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/1.1.4/phaser.js"></script>
+<script src="index.js"></script>
+
+<script>
+	function setCharacter(selectedChar) {
+		if (typeof(window.localStorage) != 'undefined') { 
+			window.localStorage.setItem("character",selectedChar);
+			location.reload();
+		}
+		else { 
+			console.log("It seems that local storage isn't working"); 
+		}
+	}
+</script>
+
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-  if(document.domain === 'hyspace.io'){
-    ga('create', 'UA-21699184-3', 'hyspace.io');
-    ga('send', 'pageview');
-  }
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-59705564-2', 'auto');
+  ga('send', 'pageview');
+
 </script>
+<script src="https://cdn.flurry.com/js/flurry.js"></script>
 </html>
