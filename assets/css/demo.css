@@ -458,6 +458,14 @@
     font-family: Monsterhunter
 }
 
+.brand .h1-seoy {
+    font-size: 5em;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-family: Monsterhunter;
+    color: #fadf01;
+}
+
 .brand .n-logo {
     max-width: 200px;
     margin-bottom: 40px;
