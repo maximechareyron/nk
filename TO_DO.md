@@ -36,6 +36,8 @@
     * [...]
 * Lien vers le serveur Minecraft
 
+###Page tournoi
+* Page pour les résultats de tournois (ex : Fifa, LoL...)
 
 ##Photoshop
 
