@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Monsterhunter';
-    src: url("../fonts/monsterhunter3d.ttf");
+    src: url("../fonts/monsterhunter.ttf");
     font-weight: normal;
     font-style: normal;
 }
@@ -452,7 +452,7 @@
 }
 
 .brand .h1-seoc {
-    font-size: 2.8em;
+    font-size: 5em;
     text-transform: uppercase;
     font-weight: 300;
     font-family: Monsterhunter

@@ -5889,6 +5889,10 @@ Created using IcoMoon - icomoon.io
     background-color: #AAAAAA;
 }
 
+[data-background-color="pink"] {
+    background-color: #ee699a;
+}
+
 [data-background-color] {
     color: #FFFFFF;
 }

@@ -36,27 +36,39 @@
             <div class="collapse navbar-collapse justify-content-end" id="navigation" data-nav-image="./assets/img/blurred-image-1.jpg">
                 <ul class="navbar-nav">
                     <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0)" onclick="scrollToSec('.section-planning')">
+                            <i class="now-ui-icons ui-1_calendar-60"></i>
+                            <p>Planning</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="javascript:void(0)" onclick="scrollToSec('.section-gallery')">
                             <i class="now-ui-icons design_image"></i>
                             <p>Gallerie</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="javascript:void(0)" onclick="scrollToSec('.section-planning')">
-                            <i class="now-ui-icons ui-1_calendar-60"></i>
-                                <p>Planning</p>
+                        <a class="nav-link" href="javascript:void(0)" onclick="scrollToSec('.section-gallery')">
+                            <i class="fa fa-phone"></i>
+                            <p>Allos</p>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="javascript:void(0)">
                             <i class="now-ui-icons ui-2_chat-round"></i>
-                            <p>Live Chat</p>
+                            <p>Live Wall</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./flappy/index.html" onclick="scrollToSec('.section-gallery')">
+                            <i class="now-ui-icons tech_controller-modern"></i>
+                            <p>Jeux</p>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link btn btn-neutral" href="javascript:void(0)">
                             <i class="now-ui-icons users_single-02"></i>
-                            <p>Se Connecter</p>
+                            <p>CAS</p>
                         </a>
                     </li>
                     <li class="nav-item">
@@ -89,9 +101,9 @@
             </div>
             <div class="container">
                 <div class="content-center brand">
-                    <img class="n-logo" src="./assets/img/ne-bee.png" alt="logo-nkeirb">
-                    <h1 class="h1-seo">Nuclé'Eirb</h1>
-                    <h3>à la recherche d'un slogan</h3>
+                    <img class="n-logo" src="./assets/img/ne-logo.png" alt="logo-nkeirb">
+                    <h1 class="h1-seoc">Nuclé'Eirb</h1>
+                    <h3>Entre nous, ça va fusionner</h3>
                 </div>
             </div>
         </div>
@@ -115,7 +127,7 @@
                 </div> -->
             <div class="section section-basic">
                 <div class="container">
-                    <h1>Notre EKIP</h1>
+                    <h1 style="margin-top:0.42em">Notre EKIP</h1>
                     <div class="taggd">
                         <img id="crew" src="assets/img/cover.jpg">
                     </div>
@@ -145,74 +157,56 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="section section-gallery" id="carousel">
-                <div class="container">
-                    <div class="col">
-                        <h1>Gallerie</h1>
-                    </div>
-                    <div class="row justify-content-center">
-                        <div class="col-md-8 col-xl-10">
-                            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                                <ol class="carousel-indicators">
-                                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                                </ol>
-                                <div class="carousel-inner" role="listbox">
-                                    <div class="carousel-item active">
-                                        <img class="d-block" src="assets/img/bg1.jpg" alt="First slide">
-                                        <div class="carousel-caption d-none d-md-block">
-                                            <h5>Image Potable 1</h5>
+                    <div style="margin-top: 0.8em">
+                        <div class="row justify-content-center">
+                            <div class="col-md-8 col-xl-10">
+                                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                                    </ol>
+                                    <div class="carousel-inner" role="listbox">
+                                        <div class="carousel-item active">
+                                            <img class="d-block" src="assets/img/bg1.jpg" alt="First slide">
+                                            <div class="carousel-caption d-none d-md-block">
+                                                <h5>Image Potable 1</h5>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="d-block" src="assets/img/bg3.jpg" alt="Second slide">
+                                            <div class="carousel-caption d-none d-md-block">
+                                                <h5>Image Potable 2</h5>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="d-block" src="assets/img/bg4.jpg" alt="Third slide">
+                                            <div class="carousel-caption d-none d-md-block">
+                                                <h5>Image Potable 3</h5>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="carousel-item">
-                                        <img class="d-block" src="assets/img/bg3.jpg" alt="Second slide">
-                                        <div class="carousel-caption d-none d-md-block">
-                                            <h5>Image Potable 2</h5>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img class="d-block" src="assets/img/bg4.jpg" alt="Third slide">
-                                        <div class="carousel-caption d-none d-md-block">
-                                            <h5>Image Potable 3</h5>
-                                        </div>
-                                    </div>
+                                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                        <i class="now-ui-icons arrows-1_minimal-left"></i>
+                                    </a>
+                                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                        <i class="now-ui-icons arrows-1_minimal-right"></i>
+                                    </a>
                                 </div>
-                                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                                    <i class="now-ui-icons arrows-1_minimal-left"></i>
-                                </a>
-                                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                                    <i class="now-ui-icons arrows-1_minimal-right"></i>
-                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            
             <div class="section section-planning">
                 <div class="container">
                     <h1>Planning</h1>
-
-                    <div class="row">
-                        <div class="col-md-7 ml-auto mr-auto">
-                            <img src="http://idata.over-blog.com/0/55/99/06/Fly-thesubs2RVB.jpg">
-                        </div>
-                    </div>
-                    <h1 align="center" style="margin-top: 0.42em">
-                    Nom de l'&Eacute;vènement
-                    </h1>
-                    <div class="row">
-                        <div class="col-md-7 ml-auto mr-auto">
-                            <p class="blockquote blockquote-nkeirb" id="compte_a_rebours"></p>
-                        </div>
-                    </div>
-                    
+                    <!-- Jour 1 -->
                     <div>
                         <h2>
                             <span class="now-ui-icons ui-1_check"></span>
-                            Jour 1 - 07/02/2017
+                            Jour #1 - 07/02/2017
                             <br/>
                             <small>
                                     <span class="now-ui-icons objects_spaceship"></span> Lancement des campagnes
@@ -260,10 +254,11 @@
                             </tbody>
                         </table>
                     </div>
-
+                    <!-- Fin Jour 1 -->
+                    <!-- Jour 2 -->
                     <div>
                         <h2>
-                        Jour 2 - 08/02/2017
+                        Jour #2 - 08/02/2017
                         <br/>
                         <small>
                                 <span class="now-ui-icons education_atom"></span> Journée Exclusive
@@ -278,6 +273,11 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                <tr>
+                                    <td>08h00</td>
+                                    <td>Petit d&eacute;jeuner</td>
+                                    <td>Rue</td>
+                                </tr>
                                 <tr>
                                     <td>10h00</td>
                                     <td>Pause d&eacute;jeuner</td>
@@ -306,7 +306,242 @@
                             </tbody>
                         </table>
                     </div>
-
+                    <!-- Fin Jour 2 -->
+                    <!-- Jour 3 -->
+                    <div>
+                        <h2>
+                            Jour #3 - 09/02/2017
+                        </h2>
+                        <table class="table table-hover">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th>Heure</th>
+                                    <th>&Eacute;v&egrave;nement</th>
+                                    <th>Lieu</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>08h00</td>
+                                    <td>Petit Déjeuner</td>
+                                    <td>EMMK</td>
+                                </tr>
+                                <tr>
+                                    <td>10h00</td>
+                                    <td>Pause - d&eacute;jeuner</td>
+                                    <td>Rue</td>
+                                </tr>
+                                <tr>
+                                    <td>12h00</td>
+                                    <td>Repas : [MENU]</td>
+                                    <td>Rue</td>
+                                </tr>
+                                <tr>
+                                    <td>19h00</td>
+                                    <td>Repas : [MENU]</td>
+                                    <td>Rue</td>
+                                </tr>
+                                <tr>
+                                    <td>20h00</td>
+                                    <td>Soirée</td>
+                                    <td>Rue</td>
+                                </tr>
+                                <tr>
+                                    <td>01h00</td>
+                                    <td>Fin de la journée de campagne</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- Fin Jour 3 -->
+                    <!-- Jour 4 -->
+                    <div>
+                        <h2>
+                            Jour #4 - 12/02/2017
+                        </h2>
+                        <table class="table table-hover">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th>Heure</th>
+                                    <th>&Eacute;v&egrave;nement</th>
+                                    <th>Lieu</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>08h00</td>
+                                    <td>Petit Déjeuner</td>
+                                    <td>Rue</td>
+                                </tr>
+                                <tr>
+                                    <td>10h00</td>
+                                    <td>Pause d&eacute;jeuner</td>
+                                    <td>Rue</td>
+                                </tr>
+                                <tr>
+                                    <td>12h00</td>
+                                    <td>Repas : [MENU]</td>
+                                    <td>Rue</td>
+                                </tr>
+                                <tr>
+                                    <td>16h00</td>
+                                    <td>Goûter</td>
+                                    <td>Rue</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- Fin Jour 4 -->
+                    <!-- Jour 5 -->
+                    <div>
+                        <h2>
+                            Jour #5 - 13/02/2017
+                        </h2>
+                        <table class="table table-hover">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th>Heure</th>
+                                    <th>&Eacute;v&egrave;nement</th>
+                                    <th>Lieu</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>08h00</td>
+                                    <td>Petit Déjeuner</td>
+                                    <td>Rue</td>
+                                </tr>
+                                <tr>
+                                    <td>10h00</td>
+                                    <td>Pause d&eacute;jeuner</td>
+                                    <td>Rue</td>
+                                </tr>
+                                <tr>
+                                    <td>12h00</td>
+                                    <td>Repas : [MENU]</td>
+                                    <td>Rue</td>
+                                </tr>
+                                <tr>
+                                    <td>18h00</td>
+                                    <td>Grosse Activité - Soirée Exclu</td>
+                                    <td>EMMK</td>
+                                </tr>
+                                <tr>
+                                    <td>19h00</td>
+                                    <td>Repas délicieux et pas cher pour attirer un max de monde : [MENU]</td>
+                                    <td>Rue</td>
+                                </tr>
+                                <tr>
+                                    <td>19h30</td>
+                                    <td>Une autre Grosse Activité - Soirée Exclu</td>
+                                    <td>EMMK</td>
+                                </tr>
+                                <tr>
+                                    <td>23h00</td>
+                                    <td>Fin de la journée de campagne</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- Fin Jour 5 -->
+                    <!-- Jour 6 -->
+                    <div  data-background-color="pink">
+                        <h2>
+                            <span class="now-ui-icons ui-1_check"></span>
+                            Jour #6 - 14/02/2017
+                            <br/>
+                            <small>
+                                    <span class="now-ui-icons ui-2_favourite-28"></span> Saint Valentin
+                            </small>
+                        </h2>
+                        <table class="table table-hover">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th>Heure</th>
+                                    <th>&Eacute;v&egrave;nement</th>
+                                    <th>Lieu</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>08h00</td>
+                                    <td>Petit Déjeuner</td>
+                                    <td>Rue</td>
+                                </tr>
+                                <tr>
+                                    <td>10h00</td>
+                                    <td>Pause d&eacute;jeuner</td>
+                                    <td>Rue</td>
+                                </tr>
+                                <tr>
+                                    <td>12h00</td>
+                                    <td>Repas : [MENU]</td>
+                                    <td>Rue</td>
+                                </tr>
+                                <tr>
+                                    <td>19h00</td>
+                                    <td>Repas : [MENU]</td>
+                                    <td>Rue</td>
+                                </tr>
+                                <tr>
+                                    <td>23h00</td>
+                                    <td>Fin de la journée de campagne</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- Fin Jour 6 -->
+                    <!-- Jour 8 -->
+                    <div>
+                        <h2>
+                            <span class="now-ui-icons ui-1_check"></span>
+                            Jour #8 - 16/02/2017
+                            <br/>
+                            <small>
+                                    <span class="now-ui-icons ui-1_bell-53"></span> Dernier jour des campagnes
+                            </small>
+                        </h2>
+                        <table class="table table-hover">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th>Heure</th>
+                                    <th>&Eacute;v&egrave;nement</th>
+                                    <th>Lieu</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>08h00</td>
+                                    <td>Petit Déjeuner</td>
+                                    <td>Rue</td>
+                                </tr>
+                                <tr>
+                                    <td>10h00</td>
+                                    <td>Pause d&eacute;jeuner</td>
+                                    <td>Rue</td>
+                                </tr>
+                                <tr>
+                                    <td>12h00</td>
+                                    <td>Repas : [MENU]</td>
+                                    <td>Rue</td>
+                                </tr>
+                                <tr>
+                                    <td>19h00</td>
+                                    <td>Repas : [MENU]</td>
+                                    <td>Rue</td>
+                                </tr>
+                                <tr>
+                                    <td>23h00</td>
+                                    <td>Fin des campagnes - Vacances</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- Fin Jour 8 -->
                 </div>
             </div>
             <div class="section section-download" id="#download-section" data-background-color="black">
@@ -368,6 +603,8 @@
                         </div>
                     </div>
                     <br>
+                    
+                    
                     <div class="row justify-content-md-center sharing-area text-center">
 
                         <div class="text-center col-md-12 col-lg-8">
