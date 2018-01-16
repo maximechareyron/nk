@@ -15,6 +15,7 @@
 * Ajouter mention "pour plus de photos, veuillez vous connecter" avec lien vers la connexion vers la galerie publique
 * Ajouter une rubrique Bons plans après la rubrique Partenariats 
 * Ajouter la rubrique Allos
+* Supprimer RedBull des partenaires (ils ne souhaient pas être associés à des évènements dont ils ne sont pas à l'origine)
 
 
 ###Galerie Privée
@@ -38,11 +39,16 @@
 
 ###Page tournoi
 * Page pour les résultats de tournois (ex : Fifa, LoL...)
+* 
+
+###Autres
+
+* Page d'erreur (404)
 
 ##Photoshop
 
 * Trouver nouvelle image pour le fond
-* Modifier le design des tuyaux sur Fabrie birds
+* Modifier le design des tuyaux sur Fabrie birds ?
 
 
 
@@ -52,6 +58,7 @@
 ##Flappy Bird
 * supergravity ?
 * Possibilité de choisir les personnages
+* Remplacer le Tigre
 
 
 ===========================================
@@ -75,10 +82,15 @@
 ===========================================
 #Serveur Minecraft
 
-* Jeu concours "Construisez la plus belle représentation de Nuclé'Eirb"
+* Jeu concours "Construisez la plus belle représentation de Nuclé'Eirb"*
+* 
+
+
+
+
 
 ===========================================
-#Eléments à mettre à jour régulièrement pendant la campagne :
+#Eléments à mettre à jour régulièrement (quotidiennement, au moins) pendant la campagne :
 
 ##Planning
 * Dévoiler les activités prévue pour la journée
