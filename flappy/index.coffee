@@ -342,7 +342,18 @@ main = ->
     gameStarted = false
     gameOver = false
     score = 0
+
+    if (character == "fab")
+      title = "Fabrie Bird"
+    else if (character == "th")
+      title = "Flappy Théo"
+    else if (character == "meh")
+      title = "Flappy Maydhi"
+    else
+      title = "Flappy Marie"
+
     scoreText.setText "Fabrie Bird\n"
+    scoreText.setText title
     instText.setText "MADE IN NUCLEEIRB\nTOUCH TO FLY"
     gameOverText.renderable = false
     bird.body.allowGravity = false
