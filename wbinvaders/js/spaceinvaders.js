@@ -266,10 +266,10 @@ WelcomeState.prototype.enter = function(game) {
     game.sounds.loadSound('bang', 'sounds/bang.wav');
     game.sounds.loadSound('explosion', 'sounds/explosion.wav');
     game.sounds.loadSound('pikpikpik', 'sounds/pikpikpik.wav');
-    game.sounds.loadSound('zala', 'sounds/zala.wav', function(sound) {
+    game.sounds.loadSound('zala', 'sounds/katchy.mp3', function(sound) {
         // loop sound of zala
         game.sounds.playSound(sound);
-        setInterval(function () { game.sounds.playSound(sound); }, 1000 * 40);
+        setInterval(function () { game.sounds.playSound(sound); }, 1000 * 167);
     });
 
     // Define deputates and on show events
