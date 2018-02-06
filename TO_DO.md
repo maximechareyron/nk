@@ -13,14 +13,14 @@
 * Afficher le menu pour chaque repas (modal)
     * Indiquer si le menu est végétarien, par ex.
 * Ajouter mention "pour plus de photos, veuillez vous connecter" avec lien vers la connexion vers la galerie publique
-* Ajouter une rubrique Bons plans après la rubrique Partenariats 
+* Ajouter une rubrique Bons plans après la rubrique Partenariats
 * Ajouter la rubrique Allos
 * Supprimer RedBull des partenaires (ils ne souhaient pas être associés à des évènements dont ils ne sont pas à l'origine)
 
 
 ###Galerie Privée
 
-* Créer une galerie Privée avec une section pour chaque jounée de campagne.
+* Créer une galerie Privée avec une section pour chaque journée de campagne.
 
 ###Page Concours
 
@@ -39,7 +39,6 @@
 
 ###Page tournoi
 * Page pour les résultats de tournois (ex : Fifa, LoL...)
-* 
 
 ###Autres
 
@@ -56,9 +55,10 @@
 #Javascript
 
 ##Flappy Bird
-* supergravity ?
+* Supergravity ?
 * Possibilité de choisir les personnages
 * Remplacer le Tigre
+* Fix iOS
 
 
 ===========================================

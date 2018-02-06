@@ -3127,12 +3127,12 @@ small {
 }
 
 a {
-    color: #F96332;
+    color: #42AA42;
 }
 
 a:hover,
 a:focus {
-    color: #F96332;
+    color: #42AA42;
 }
 
 h1,
@@ -4951,7 +4951,7 @@ Created using IcoMoon - icomoon.io
 }
 
 .modal.modal-primary .modal-content {
-    background-color: #F96332;
+    background-color: #424242;
     color: #FFFFFF;
 }
 
