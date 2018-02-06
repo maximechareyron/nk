@@ -255,7 +255,7 @@ main = function() {
     } else {
       assets = {
         spritesheet: {
-          bird: ["assets/characters/fhsu.png", 24, 23]
+          bird: ["assets/characters/cha.png", 25, 30]
         },
         image: {
           tubeTop: ["assets/tube1.png"],
@@ -356,7 +356,7 @@ main = function() {
     } else if (character === "meh") {
       title = "Flappy Maydhi";
     } else {
-      title = "Flappy Marie";
+      title = "Floppy Charlotte";
     }
     scoreText.setText("Fabrie Bird\n");
     scoreText.setText(title);
