@@ -466,6 +466,13 @@
     color: #fadf01;
 }
 
+.brand .h2-seoc {
+    font-size: 4em;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-family: Monsterhunter
+}
+
 .brand .n-logo {
     max-width: 200px;
     margin-bottom: 40px;
